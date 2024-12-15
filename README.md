@@ -1,5 +1,5 @@
 # Data-Pengangguran-Gen-Z
-Sebuah coding tentang data pengangguran Gen Z
+#Sebuah coding tentang data pengangguran Gen Z
 import pandas as pd
 
 # Membuat DataFrame dengan data pengangguran Gen Z

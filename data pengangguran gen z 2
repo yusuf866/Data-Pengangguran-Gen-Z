@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+data = pd.read_csv('data_pengangguran_gen_z.csv')
+
+print(data.head())
+
+pengangguran_per_kategori = data['kategori'].value_counts(normalize=True) * 100
+print(pengangguran_per_kategori)
+plt.figure(figsize=(10, 6))
+sns.barplot(x=pengangguran_per_kategori.index, y=pengangguran_per_kategori.values)
+plt.title('Persentase Pengangguran Gen Z Berdasarkan Kategori')
+plt.xlabel('Kategori')
+plt.ylabel('Persentase (%)')
+plt.xticks(rotation=45)
+plt.show()
+
+pengangguran_per_kategori.to_csv('hasil_analisis_pengangguran_gen_z.csv')
